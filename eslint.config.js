@@ -5,5 +5,8 @@ export default [
   ...reactConfig,
   {
     // other override settings. e.g. for `files: ['**/*.test.*']`
-  }
+  },
+  {
+    ignores: ['.next/**'],
+  },
 ];
