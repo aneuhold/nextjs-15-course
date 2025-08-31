@@ -1,11 +1,16 @@
 {
   "private": true,
+  "name": "nextjs-15-course",
   "type": "module",
   "scripts": {
     "build": "next build --no-lint",
     "dev": "next dev --turbopack",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "sub": "pnpm sub:eslintconfig",
+    "sub:eslintconfig": "local-npm subscribe @aneuhold/eslint-config",
+    "unsub": "pnpm unsub:eslintconfig",
+    "unsub:eslintconfig": "local-npm unsubscribe @aneuhold/eslint-config"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -25,7 +30,8 @@
     "zod": "^3.25.76"
   },
   "devDependencies": {
-    "@aneuhold/eslint-config": "^1.2.1",
+    "@aneuhold/eslint-config": "^1.3.1",
+    "@aneuhold/local-npm-registry": "^0.2.11",
     "@types/bcrypt": "^5.0.2",
     "@types/node": "22.10.7",
     "@types/react": "19.0.7",
